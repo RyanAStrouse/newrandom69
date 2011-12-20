@@ -17,6 +17,7 @@
   "dependencies": {
     "hubot": "2.0.7",
     "hubot-scripts": "2.0.2",
+    "nodepie": "0.4.0",
     "optparse": "1.0.3",
     "hubot-talker": ">= 0.0.1"
   }
