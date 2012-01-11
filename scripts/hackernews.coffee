@@ -9,7 +9,7 @@ hnFeedUrl = "https://news.ycombinator.com/rss"
 
 module.exports = (robot) ->
   robot.respond /HN top (\d+)?/i, (msg) ->
-    msg.send "testttt"
+   # msg.send "testttt"
     msg.http(hnFeedUrl).get() (err, res, body) ->
       if res.statusCode is not 200
         msg.send "Something's gone awry"
@@ -25,7 +25,7 @@ module.exports = (robot) ->
           msg.send "Something's gone awry"
 
   robot.hear /HN(\.top|\[\d+\])/i, (msg) ->
-     msg.send "testttt2"
+    # msg.send "testttt2"
      msg.http(hnFeedUrl).get() (err, res, body) ->
        if res.statusCode is not 200
          msg.send "Something's gone awry"
