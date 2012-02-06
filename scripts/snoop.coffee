@@ -7,4 +7,5 @@
 module.exports = (robot) ->
 
   robot.respond /(snoop)( me)/i, (msg) ->
+    
 	msg.send "When the pimps in the crib ma drop it like its hot"
