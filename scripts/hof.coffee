@@ -6,7 +6,7 @@ module.exports = (robot) ->
 		
 		if item is 'show'
 			response = ""
-			for i in [0..robot.brain.data.hof.length]
+			for i in [0..robot.brain.data.hof.length - 1]
 				response += robot.brain.data.hof[i]
 			msg.send response
 		else
