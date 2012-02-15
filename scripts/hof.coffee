@@ -17,7 +17,7 @@ module.exports = (robot) ->
 				freq[store[v]] = (freq[store[v]] ? 0) + 1
 				if freq[store[v]] > max
 					max = freq[store[v]]
-					response = store.v + 'has ' + max + ' votes'
+					response = v + 'has ' + max + ' votes'
 		else if item is 'reset'
 			robot.brain.data.hof = []
 			response = 'hall of fame reset'
