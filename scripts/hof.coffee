@@ -8,7 +8,7 @@ module.exports = (robot) ->
 		if item is 'show'
 			for i in [0..robot.brain.data.hof.length - 1]
 				response += robot.brain.data.hof[i] + ', '
-			response = response.substring 0, response.length - 1
+			response = response.substring 0, response.length - 2
 		else if item is 'show top'
 			freq = {}
 			max = 0
@@ -17,7 +17,7 @@ module.exports = (robot) ->
 				freq[store[v]] = (freq[store[v]] ? 0) + 1
 				if freq[store[v]] > max
 					max = freq[store[v]]
-					response = v + 'has ' + max + ' votes'
+					response = v + ' has ' + max + ' votes'
 		else if item is 'reset'
 			robot.brain.data.hof = []
 			response = 'hall of fame reset'
