@@ -1,14 +1,18 @@
 # hall of fame
 
 module.exports = (robot) ->
-	robot.respond /hall of fame ([\w .-]+)\?*$/i, (msg) ->
+	robot.respond /hall of fame (.*)\?*$/i, (msg) ->
 		item = msg.match[1]
 		
 		response = ""
+		store = robot.brain.data.hof ? []
 		if item is 'show'
-			for i in [0..robot.brain.data.hof.length - 1]
-				response += robot.brain.data.hof[i] + ', '
-			response = response.substring 0, response.length - 2
+			if store.length > 0
+				for i in [0..store.length - 1]
+					response += robot.brain.data.hof[i] + ', '
+				response = response.substring 0, response.length - 2
+			else
+				response = "nothing has been added to the hall of fame"
 		else if item is 'show top'
 			freq = {}
 			max = 0
@@ -18,6 +22,8 @@ module.exports = (robot) ->
 				if freq[store[v]] > max
 					max = freq[store[v]]
 					response = v + ' has ' + max + ' votes'
+			if response ? "nothing has been added to the hall of fame" else response
+				
 		else if item is 'reset'
 			robot.brain.data.hof = []
 			response = 'hall of fame reset'
