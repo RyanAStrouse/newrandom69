@@ -8,10 +8,12 @@ module.exports = (robot) ->
 		if item is 'show'
 			for i in [0..robot.brain.data.hof.length - 1]
 				response += robot.brain.data.hof[i] + ', '
+			response = response.substring 0, response.length - 1
 		else if item is 'show top'
 			freq = {}
 			max = 0
-			for v in robot.brain.data.hof
+			store = robot.brain.data.hof
+			for v in store
 				freq[store[v]] = (freq[store[v]] ? 0) + 1
 				if freq[store[v]] > max
 					max = freq[store[v]]
