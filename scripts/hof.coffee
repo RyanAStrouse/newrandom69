@@ -21,7 +21,7 @@ module.exports = (robot) ->
 				freq[store[v]] = (freq[store[v]] ? 0) + 1
 				if freq[store[v]] > max
 					max = freq[store[v]]
-					response = v + ' has ' + max + ' votes'
+					response = v + ' has the most votes'
 			if response ? "nothing has been added to the hall of fame" else response
 				
 		else if item is 'reset'
@@ -30,6 +30,6 @@ module.exports = (robot) ->
 		else
 			robot.brain.data.hof = robot.brain.data.hof || []
 			robot.brain.data.hof.push item
-			response = item + 'added to hall of fame'
+			response = item + ' added to hall of fame'
 			
 		msg.send response
