@@ -1,7 +1,7 @@
 # Who's turn to do something ?
 #
 # who <does something> ? - Returns who does !
-#                      
+#                      -
 module.exports = (robot) ->
   robot.respond /(who|qui) (.+)\?/i, (msg) ->
     users = []
