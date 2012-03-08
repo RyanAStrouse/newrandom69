@@ -1,5 +1,5 @@
 # Who's turn to do something ?
-#
+#4
 # who <does something> ? - Returns who does !
 #                      -
 module.exports = (robot) ->
