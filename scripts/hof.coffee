@@ -7,6 +7,7 @@ module.exports = (robot) ->
 		response = ""
 		store = robot.brain.data.hof ? []
 
+
 		if item is 'show'
 			if store.length > 0
 				for i in [0..store.length - 1]
