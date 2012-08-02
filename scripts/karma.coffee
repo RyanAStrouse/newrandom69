@@ -4,7 +4,7 @@
 # <thing>-- - take away some of thing's karma
 # karma <thing> - check thing's karma (if <thing> is omitted, show the top 5)
 # karma empty <thing> - empty a thing's karma
-# karma best - show the top 5
+# karma best - show the top 5 
 # karma worst - show the bottom 5
 class Karma
   
