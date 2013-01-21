@@ -1,1 +1,1 @@
-app: bin/hubot -a talker -n botx 
+app: bin/hubot -a talker -n BotX
