@@ -22,4 +22,4 @@ module.exports = (robot) ->
 
 	robot.hear /botx mac n cheese me/i, (msg) ->
 		rnd = Math.floor(Math.random() * images.length)
-	    msg.send images[rnd]
+		msg.send images[rnd]
