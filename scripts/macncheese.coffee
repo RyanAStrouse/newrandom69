@@ -19,7 +19,7 @@ module.exports = (robot) ->
 			"http://images.lifesambrosia.com/food/large/three-cheese-macaroni-and-cheese.jpg",
 			"http://www.endlesssimmer.com/wp-content/uploads/2011/03/lizlemon5.gif",
 			"http://24.media.tumblr.com/tumblr_m8sy5oJMGy1rtxvj1o1_250.gif"
-		]
+			]
 
 	    rnd = Math.floor(Math.random() * images.length)
 	    msg.send images[rnd]
