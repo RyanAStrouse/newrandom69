@@ -3,6 +3,7 @@ module.exports = (robot) ->
     now = new Date()
     hour = now.getHours()
     day = now.getDay()
+    console.log hour
     if day == 5 && hour >= 15
       msg.send "YES IT IS"
     else
