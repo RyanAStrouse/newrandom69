@@ -3,7 +3,7 @@ module.exports = (robot) ->
     now = new Date()
     hour = now.getHours()
     day = now.getDay()
-    if day == 5 && hour >= 15
+    if day == 5 && hour >= 20
       msg.send "YES IT IS"
     else
       msg.send "NOT YET"
