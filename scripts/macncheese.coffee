@@ -1,3 +1,19 @@
+# Description:
+#   Mac n Cheese images
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot mac n cheese me
+#   
+# Author:
+#   sveerkamp
+#
+
 module.exports = (robot) ->
 	
 	images = [
@@ -21,5 +37,4 @@ module.exports = (robot) ->
 	]
 
 	robot.hear /botx mac n cheese me/i, (msg) ->
-		rnd = Math.floor(Math.random() * images.length)
-		msg.send images[rnd]
+		msg.send msg.random images

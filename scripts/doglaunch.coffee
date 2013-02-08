@@ -1,5 +1,18 @@
+# Description:
+#   deploy dog launch
 #
-# deploy dog launch
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot deploy dog launch
+#
+# Author:
+#   unknown
+#
 
 module.exports = (robot) ->
 

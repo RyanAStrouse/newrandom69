@@ -1,4 +1,21 @@
-# hall of shame
+# Description:
+#   Hall of Shame
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot hall of shame show
+#   hubot hall of shame show top
+#   hubot hall of shame reset
+#   hubot hall of shame <text or link>
+#   
+# Author:
+#   cgack
+#
 
 module.exports = (robot) ->
 	robot.respond /hall of shame (.*)\?*$/i, (msg) ->

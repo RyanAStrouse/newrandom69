@@ -1,4 +1,21 @@
-# hall of fame
+# Description:
+#   hall of fame
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot hall of fame show
+#   hubot hall of fame show top
+#   hubot hall of fame reset
+#   hubot hall of fame <text or link>
+#
+# Author:
+#   cgack
+#
 
 module.exports = (robot) ->
 	robot.respond /hall of fame (.*)\?*$/i, (msg) ->
