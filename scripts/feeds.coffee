@@ -55,10 +55,10 @@ fetchFeed = (httpClient, feedInfo) ->
       catch e
         console.log("feeds.coffee: " + e)
 
-module.exports = (robot) ->
-  httpClient = robot.Response::httpClient
-
-  setInterval ->
-    for feedInfo in feeds
-      fetchFeed(httpClient, feedInfo)
-  , 300000
+#module.exports = (robot) ->
+#  httpClient = robot.Response::httpClient
+#
+#  setInterval ->
+#    for feedInfo in feeds
+#      fetchFeed(httpClient, feedInfo)
+#  , 300000
