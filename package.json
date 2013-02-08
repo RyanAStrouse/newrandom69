@@ -8,7 +8,9 @@
   "description": "A badass bot.",
   "dependencies": {
     "hubot-talker": ">= 1.0.1",
-    "hubot": ">= 2.0.0"
+    "hubot": ">= 2.0.0",
+    "nodepie": "0.6.0",
+    "soupselect": "0.2.0"
   },
    "engines": {
     "node": ">= 0.8.x",
