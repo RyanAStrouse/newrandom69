@@ -1,6 +1,17 @@
-# Feed Checker
+# Description:
+#   Feed Checker - Reports when your feeds have a new entry. Only works on Talker...
 #
-# Reports when your feeds have a new entry. Only works on Talker...
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   
+# Author:
+#   atoumey
+#
 
 NodePie = require("nodepie")
 Util = require "util"

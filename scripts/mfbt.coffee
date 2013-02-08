@@ -1,3 +1,19 @@
+# Description:
+#   MFBT
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot is it mfbt
+#   
+# Author:
+#   cgack
+#
+
 module.exports = (robot) ->
   robot.respond /(is it mfbt)/i, (msg) ->
     now = new Date()

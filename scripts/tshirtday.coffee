@@ -1,5 +1,19 @@
+# Description:
+#   Display a wolf shirt review
 #
-# Talk like a pirate
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot wolf shirt me
+#   
+# Author:
+#   paul?
+#
+#
 
 module.exports = (robot) ->
 
