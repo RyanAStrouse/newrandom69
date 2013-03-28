@@ -19,7 +19,7 @@ module.exports = (robot) ->
     now = new Date()
     hour = now.getHours()
     day = now.getDay()
-    if day == 5 && hour >= 19 
+    if day >= 4 && hour >= 19 
       msg.send "YES IT IS"
     else
       msg.send "NOT YET"
