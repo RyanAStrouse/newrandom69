@@ -21,7 +21,7 @@ module.exports = (robot) ->
     now = new Date()
     hour = now.getHours()
     day = now.getDay()
-    min = new.getMinutes()
+    min = now.getMinutes()
     if day >= 3 && hour >= 19 && min >= 17
       robot.messageRoom 1821, 'HEY! its MFBT!'
       clearInterval intv
