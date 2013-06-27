@@ -26,5 +26,5 @@ checkTime ->
 intv = setInterval checkTime, 60 * 1000
 
 module.exports = (robot) ->
-  robot.on "mfbt"
+  robot.on "mfbt", () ->
     robot.messageRoom 2040, 'its mfbt!'
