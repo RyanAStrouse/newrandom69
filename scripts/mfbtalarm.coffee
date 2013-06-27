@@ -14,7 +14,7 @@
 #   cgack
 #
 
-checkTime ->
+checkTime = () ->
   now = new Date()
   hour = now.getHours()
   day = now.getDay()
