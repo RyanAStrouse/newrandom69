@@ -9,7 +9,7 @@
 #
 # Commands:
 #   hubot snoop lion me
-#   
+#    idk why
 # Author:
 #   jscott
 #
