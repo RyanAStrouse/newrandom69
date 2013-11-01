@@ -1,2 +1,1 @@
-app: bin/hubot -a talker -n BotX
-restart: heroku restart
+web: bin/hubot -a slack -n BotX
