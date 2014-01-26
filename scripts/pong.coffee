@@ -3,5 +3,5 @@
 # !pong register
 
 module.exports = (robot) ->
-    robot.respond /!pong register/i (msg) ->
+    robot.respond /!pong register/i, (msg) ->
         msg.send "No!"
