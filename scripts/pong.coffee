@@ -20,16 +20,19 @@ module.exports = (robot) ->
     robot.respond /pong challenge @?([a-z\.\-_]+)/i, (msg) ->
         console.log msg.match[1]
         challenger = robot.brain.userForId(msg.message.user.id)
+        console.log challenger
         if not challenger
             msg.reply "You gotta register first, pal. Try 'pong register'."
             return
 
         challengee = robot.brain.user.userForName(msg.match[1])
+        console.log challengee
         if not challengee or not challengee.playsPong?
             msg.reply "No such person has registered to play."
             return
 
         pongData = getPongData()
-        getPongData.challenges ?= []
-        challenges.push { challenger: challenger.id, challengee: challengee.id, time: new Date() }
+        console.log pongData
+        pongData.challenges ?= []
+        pongData.challenges.push { challenger: challenger.id, challengee: challengee.id, time: new Date() }
         msg.reply "Challenge registered!"
