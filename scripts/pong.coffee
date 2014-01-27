@@ -12,8 +12,9 @@ module.exports = (robot) ->
         pong.users ?= {}
         return pong.users
 
-    robot.reply /pong register/i, (msg) ->
+    robot.respond /pong register/i, (msg) ->
         console.log msg.message.user
         pongUser = robot.brain.userForId(msg.message.user.id, { 'name': msg.message.user.name })
+        console.log pongUser
         pongUser.playsPong = true
         msg.reply "You are now part of the ping pong ladder!"
