@@ -15,7 +15,7 @@ module.exports = (robot) ->
             msg.reply "You are already registered."
         else
             pongUser.playsPong = true
-        msg.reply "You are now part of the ping pong ladder!"
+            msg.reply "You are now part of the ping pong ladder!"
 
     robot.respond /pong challenge @?([a-z\.\-_]+)/i, (msg) ->
         challenger = robot.brain.userForId(msg.message.user.id)
