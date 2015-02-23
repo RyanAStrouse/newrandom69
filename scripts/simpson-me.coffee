@@ -7,10 +7,12 @@
 
 module.exports = (robot) ->
   robot.respond /(simpson me)/i, (msg) ->
+    console.log('here')
     api_key = "pYuqaM2AM1tafunqXhoDXcM0KoxPpHCEUV7jkxbQ2ww5w5nUnl"
     msg.http("http://api.tumblr.com/v2/blog/snipsons.tumblr.com/info")
       .query(api_key: api_key)
       .get() (err, res, body) ->
+        console.log('get')
         if err
           msg.send "Tumblr says: #{err}"
           return
