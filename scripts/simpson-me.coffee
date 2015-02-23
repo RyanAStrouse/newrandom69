@@ -24,7 +24,7 @@ module.exports = (robot) ->
           return
 
         rand = Math.random()
-        selection = Math.round(rand * content.response.posts)
+        selection = Math.round(rand * content.response.blog.posts)
         console.log('selection: ', selection)
         msg.http("http://api.tumblr.com/v2/blog/snipsons.tumblr.com/posts/photo")
           .query(api_key: api_key, offset: selection, limit: 1)
@@ -40,11 +40,4 @@ module.exports = (robot) ->
               msg.send "Tumblr says: #{content.meta.msg}"
               return
 
-            post = content.response.posts
-            console.log('post: ', post)
-            for post in posts
-              if posts.length is 1
-                msg.send post.caption
-              for photo in post.photos
-                console.log('photo: ', photo)
-                msg.send photo.original_size.url
+            msg.send content.posts[0].photos[0].url
