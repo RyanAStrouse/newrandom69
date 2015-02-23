@@ -40,4 +40,4 @@ module.exports = (robot) ->
               msg.send "Tumblr says: #{content.meta.msg}"
               return
 
-            msg.send content.posts[0].photos[0].url
+            msg.send content.response.posts[0].photos[0].alt_sizes[1].url
