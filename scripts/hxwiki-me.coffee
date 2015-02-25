@@ -21,12 +21,12 @@ module.exports = (robot) ->
       console.log('data: ', data)
       if (data.results[0])
         if typeof callback is 'function'
-          callback data, query
+          callback data, query, msg
         else
           msg.send 'Oops!  Something went wrong :('
           throw new Error('Ultra-failed search!')
 
-	callback = (data, query) ->
+	callback = (data, query, msg) ->
 	  console.log('reached callback')
 	  outputXML = $.parseHTML(data.results[0])
 	  $xml = $( outputXML )
