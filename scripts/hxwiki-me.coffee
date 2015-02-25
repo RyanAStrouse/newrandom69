@@ -26,37 +26,37 @@ module.exports = (robot) ->
           msg.send 'Oops!  Something went wrong :('
           throw new Error('Ultra-failed search!')
 
-callback = (data, query) ->
-  console.log('reached callback')
-  outputXML = $.parseHTML(data.results[0])
-  $xml = $( outputXML )
+	callback = (data, query) ->
+	  console.log('reached callback')
+	  outputXML = $.parseHTML(data.results[0])
+	  $xml = $( outputXML )
 
-  title = $xml.find("title")
+	  title = $xml.find("title")
 
-  link = $xml.find("link[rel|='alternate']")
+	  link = $xml.find("link[rel|='alternate']")
 
-  query = decodeURIComponent(query)
-  console.log('callback query: ', query)
+	  query = decodeURIComponent(query)
+	  console.log('callback query: ', query)
 
-  patt = new RegExp(query, 'gi')
-  display = []
-  showMore = []
+	  patt = new RegExp(query, 'gi')
+	  display = []
+	  showMore = []
 
-  for i in link
-    if patt.test(title[i].innerText) is true
-      display.push('<a href = ' + link[i].href + '>' + title[i].innerText + '</a>')
-    else if title[i].innerText isnt 'Content'
-      showMore.push('<a href = ' + link[i].href +'>' + title[i].innerText + '</a>')
-  
-    console.log('display: ', display)
-    console.log('showMore:', showMore)
-    if display.length < 1
-      showMore.join('<br />')
-      $('#showMore').hide()
-    else
-      out = html(display.join('<br />') + '<br /><br /><a id = "showMore" href = #>Show More?</a>')
-      console.log('out: ', out)
-      $('#showMore').click ->
-        $('#more').html(showMore.join('<br />'))
-        $(this).hide()
-      msg.send out
+	  for i in link
+	    if patt.test(title[i].innerText) is true
+	      display.push('<a href = ' + link[i].href + '>' + title[i].innerText + '</a>')
+	    else if title[i].innerText isnt 'Content'
+	      showMore.push('<a href = ' + link[i].href +'>' + title[i].innerText + '</a>')
+	  
+	    console.log('display: ', display)
+	    console.log('showMore:', showMore)
+	    if display.length < 1
+	      showMore.join('<br />')
+	      $('#showMore').hide()
+	    else
+	      out = html(display.join('<br />') + '<br /><br /><a id = "showMore" href = #>Show More?</a>')
+	      console.log('out: ', out)
+	      $('#showMore').click ->
+	        $('#more').html(showMore.join('<br />'))
+	        $(this).hide()
+	      msg.send out
