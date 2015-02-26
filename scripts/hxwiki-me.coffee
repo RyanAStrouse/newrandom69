@@ -24,11 +24,15 @@ module.exports = (robot) ->
           msg.send "Couldn't parse JSON"
           return
 
-        if (data.query.results)
+        if data.query.results isnt null
           try
+            msg.send 'Query received.'
             msg.send callback data.query.results.feed, query
+            msg.send 'Did you get all that?'
           catch error
-            msg.send 'Oops!  Something went wrong :( '
+            msg.send 'Oops!  Something went wrong :( ' + error
+        else
+          msg.send 'Sorry, your query got lost in the tubes!'
 
 callback = (data, query) ->
   title = []
