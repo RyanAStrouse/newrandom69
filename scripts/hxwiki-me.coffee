@@ -63,6 +63,8 @@ callback = (data, query) ->
   #   showMore.join('<br />')
   #   $('#showMore').hide()
   # else
+  display = display.join(' ')
+  showMore = showMore.join(' ')
   out = display.concat(showMore)
     # <a id = "showMore" href = #>Show More?</a>
     # console.log('out: ', out)
