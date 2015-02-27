@@ -55,16 +55,16 @@ callback = (data, query) ->
 
   for i of link
     if patt.test(title[i])
-      display.push(title[i] + ': ' + link[i] + '<br />')
+      display.push(title[i] + ': ' + link[i])
     else
-      showMore.push(title[i] + ': ' + link[i] + '<br />')
+      showMore.push(title[i] + ': ' + link[i])
 
   # if display.length < 1
   #   showMore.join('<br />')
   #   $('#showMore').hide()
   # else
-  display = display.join(' ')
-  showMore = showMore.join(' ')
+  display = display.join('\r\n')
+  showMore = showMore.join('\r\n')
   out = display.concat(showMore)
     # <a id = "showMore" href = #>Show More?</a>
     # console.log('out: ', out)
