@@ -26,9 +26,9 @@ module.exports = (robot) ->
 
         if data.query.results isnt null
           try
-            msg.send 'Query received.'
+            msg.send 'One moment please...'
             msg.send callback data.query.results.feed, query
-            msg.send 'Did you get all that?'
+            # msg.send 'Did you get all that?'
           catch error
             msg.send 'Oops!  Something went wrong :( ' + error
         else
@@ -66,6 +66,7 @@ callback = (data, query) ->
   display = display.join(' ')
   showMore = showMore.join(' ')
   out = display.concat(showMore)
+  out = out.join('<br />')
     # <a id = "showMore" href = #>Show More?</a>
     # console.log('out: ', out)
     # $('#showMore').click ->
