@@ -51,7 +51,7 @@ callback = (data, query) ->
 
   patt = new RegExp(query, 'gi')
   display = []
-  showMore = []
+  showMore = ['\r\n']
 
   for i of link
     if patt.test(title[i])
