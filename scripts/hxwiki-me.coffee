@@ -26,7 +26,7 @@ module.exports = (robot) ->
 
         if data.query.results isnt null
           try
-            msg.send 'One moment please...'
+            # msg.send 'One moment please...'
             msg.send callback data.query.results.feed, query
             # msg.send 'Did you get all that?'
           catch error
