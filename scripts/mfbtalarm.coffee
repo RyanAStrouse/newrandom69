@@ -22,7 +22,7 @@ module.exports = (robot) ->
     hour = now.getHours()
     day = now.getDay()
     min = now.getMinutes()
-    if day == 5 && hour >= 20 && min >= 17
+    if day == 5 && hour >= 19 && min >= 17
       robot.messageRoom '#random', 'HEY! its MFBT!'
       clearInterval intv
       false
