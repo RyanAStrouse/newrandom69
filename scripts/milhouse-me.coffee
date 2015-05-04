@@ -2,11 +2,11 @@
 #   Grabs a picture from actualmilhouse.tumblr.com and sends the URL.
 #
 # Commands:
-#   hubot milhouse me - displays a milhouse picture
+#   hubot milhouse (someone) - displays a milhouse picture
 #
 
 module.exports = (robot) ->
-  robot.respond /(milhouse) me/i, (msg) ->
+  robot.respond /milhouse (.*)/i, (msg) ->
     API_KEY = "pYuqaM2AM1tafunqXhoDXcM0KoxPpHCEUV7jkxbQ2ww5w5nUnl"
     msg.http("http://api.tumblr.com/v2/blog/actualmilhouse.tumblr.com/info")
       .query(api_key: API_KEY)
