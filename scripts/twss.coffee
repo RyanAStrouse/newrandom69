@@ -22,4 +22,4 @@ module.exports = (robot) ->
       msg.send "THAT'S WHAT SHE SAID!"
 
   robot.respond /twss (.*)/i, (msg) ->
-    msg.send twss.probability(res.match[1])
+    msg.send twss.probability(msg.match[1])
