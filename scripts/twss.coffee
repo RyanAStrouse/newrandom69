@@ -20,3 +20,6 @@ module.exports = (robot) ->
   robot.respond /.*/, (msg) ->
     if twss.is(msg)
       msg.send "THAT'S WHAT SHE SAID!"
+
+  robot.respond /twss (.*)/i, (msg) ->
+    msg.send twss.probability(res.match[1])
