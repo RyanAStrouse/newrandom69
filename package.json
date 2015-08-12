@@ -14,7 +14,8 @@
     "nodepie": "0.6.0",
     "soupselect": "0.2.0",
     "htmlparser": "1.7.6",
-    "redis": "0.8.2"
+    "redis": "0.8.2",
+    "twss": "0.1.6"
   },
   "engines": {
     "node": "= 0.8.21",
