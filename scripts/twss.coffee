@@ -13,7 +13,7 @@
 # Author:
 #   atoumey
 
-var twss = require('twss');
+twss = require('twss')
 
 module.exports = (robot) ->
   #robot.respond /.*(big|small|long|hard|soft|mouth|face|good|fast|slow|in there|on there|in that|on that|wet|dry|on the|in the|suck|blow|jaw|all in|fit that|fit it|hurts|hot|huge|balls|stuck)/i, (msg) ->
