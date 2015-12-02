@@ -33,13 +33,5 @@ ackbars = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /it['â€™]?s a trap\b/i, (msg) ->
-    if not robot.fromSelf msg
-        text = "<img src='" + msg.random(ackbars) + "'>"
-        robot.fancyMessage({
-            msg: text,
-            color: "red",
-            room: msg.envelope.room,
-            from: "Admiral Akbar",
-        });
-
+  robot.hear /it['’]?s a trap\b/i, (msg) ->
+    msg.send msg.random ackbars

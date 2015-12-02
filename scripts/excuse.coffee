@@ -8,9 +8,12 @@
 #   None
 #
 # Commands:
-#   developer excuse - Get a random developer excuse
-#   excuse - Get a random developer excuse
-#   designer excuse - Get a random designer excuse
+#   hubot developer excuse me - Get a random developer excuse
+#   hubot developer excuse - Get a random developer excuse
+#   hubot excuse - Get a random developer excuse
+#
+#   hubot designer excuse me - Get a random designer excuse
+#   hubot designer excuse - Get a random designer excuse
 #
 # Author:
 #   ianmurrays, hopkinschris
@@ -28,7 +31,7 @@ DESIGNER_EXCUSES = [
   "That's way too flat.",
   "Just put a long shadow on it.",
   "It wasn't designed for that kind of content.",
-  "Josef MÃ¼ller-Brockmann.",
+  "Josef Müller-Brockmann.",
   "That must be a server thing.",
   "It only looks bad if it's not on Retina.",
   "Are you looking at it in IE or something?",
@@ -46,26 +49,13 @@ DESIGNER_EXCUSES = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /^(?:developer excuse|excuse)(?: me)?$/i, (msg) ->
-    if robot.fromSelf msg
-        return
-    if msg.envelope.user.jid isnt process.env.HUBOT_HIPCHAT_JID
-        robot.http("http://developerexcuses.com")
-          .get() (err, res, body) ->
-            matches = body.match /<a [^>]+>(.+)<\/a>/i
+  robot.respond /(?:developer excuse|excuse)(?: me)?/i, (msg) ->
+    robot.http("http://developerexcuses.com")
+      .get() (err, res, body) ->
+        matches = body.match /<a [^>]+>(.+)<\/a>/i
 
-            if matches and matches[1]
-              robot.fancyMessage({
-                msg: matches[1],
-                room: msg.envelope.room,
-                from: "Excuse Emu",
-              });
+        if matches and matches[1]
+          msg.send matches[1]
 
-  robot.hear /^designer excuse(?: me)?$/i, (msg) ->
-    if msg.envelope.user.jid isnt process.env.HUBOT_HIPCHAT_JID
-        robot.fancyMessage({
-            msg: msg.random(DESIGNER_EXCUSES),
-            room: msg.envelope.room,
-            from: "Excuse Emu",
-        });
-
+  robot.respond /designer excuse(?: me)?/i, (msg) ->
+    msg.send msg.random(DESIGNER_EXCUSES)
