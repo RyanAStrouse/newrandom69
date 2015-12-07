@@ -3,4 +3,4 @@
 # i couldn't figure out how to make it only respond when jason says iu 
 module.exports = (robot) ->
   robot.hear /(doh!|d\'oh!)/i, (msg) ->
-    msg.send "http://blog.shaleshockmedia.org/wp-content/uploads/2013/01/homer_doh1.png"
+    msg.send "https://files.slack.com/files-pri/T024FGTV0-F0G3DU7RV/1333139688_homer_doh.png"
