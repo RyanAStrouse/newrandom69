@@ -1,15 +1,15 @@
 ﻿# Description:
-#   Grabs a random picture from snipsons.tumblr.com and posts it.
+#   Grabs a picture from kidmograph.tumblr.com and sends the URL.
 #
 # Commands:
-#   hubot simpson me - displays a snipsons.tumblr.com picture
+#   hubot trippin - woooaaaahhh
 #
 
 module.exports = (robot) ->
-  robot.respond /(simpson|simpsons) me/i, (msg) ->
-    api_key = "pYuqaM2AM1tafunqXhoDXcM0KoxPpHCEUV7jkxbQ2ww5w5nUnl"
-    msg.http("http://api.tumblr.com/v2/blog/snipsons.tumblr.com/info")
-      .query(api_key: api_key)
+  robot.respond /trippin/i, (msg) ->
+    API_KEY = "pYuqaM2AM1tafunqXhoDXcM0KoxPpHCEUV7jkxbQ2ww5w5nUnl"
+    msg.http("http://api.tumblr.com/v2/blog/kidmograph.tumblr.com/info")
+      .query(api_key: API_KEY)
       .get() (err, res, body) ->
         if err
           msg.send "Tumblr says: #{err}"
@@ -22,8 +22,8 @@ module.exports = (robot) ->
 
         rand = Math.random()
         selection = Math.round(rand * content.response.blog.posts)
-        msg.http("http://api.tumblr.com/v2/blog/snipsons.tumblr.com/posts/photo")
-          .query(api_key: api_key, offset: selection, limit: 1)
+        msg.http("http://api.tumblr.com/v2/blog/kidmograph.tumblr.com/posts/photo")
+          .query(api_key: API_KEY, offset: selection, limit: 1)
           .get() (err, res, body) ->
 
             if err
