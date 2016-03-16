@@ -14,5 +14,5 @@
 answers = ["yes", "no"]
 
 module.exports = (robot) ->
-  robot.respond /is (ICIT|icit) (down|slow)\/i, (msg) ->
+  robot.respond /is (ICIT|icit) (down|slow)/i, (msg) ->
     msg.reply msg.random answers
