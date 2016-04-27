@@ -1,5 +1,5 @@
 module.exports = (robot) ->
-  robot.hear /(kanye |kanye)(..)/i, (msg) ->
+  robot.respond /(kanye |kanye)(..)/i, (msg) ->
     num = msg.match[2]
     switch num
       when "1" then msg.send "http://i.imgur.com/9Dql0R1.png"
