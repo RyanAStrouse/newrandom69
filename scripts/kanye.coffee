@@ -1,6 +1,7 @@
 module.exports = (robot) ->
   robot.respond /(kanye|kanye )? (.*)/i, (msg) ->
     num = msg.message.text
+    msg.send msg.message.text
     switch num
       when "1" then msg.send("http://i.imgur.com/9Dql0R1.png")
       when "2" then msg.send("http://i.imgur.com/MjO4B40.png")
