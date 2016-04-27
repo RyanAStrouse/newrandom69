@@ -1,5 +1,5 @@
 module.exports = (robot) ->
-  robot.respond /(kanye|kanye )? (.*)/i, (msg) ->
+  robot.hear /(kanye |kanye)(..)/i, (msg) ->
     num = msg.match[2]
     switch num
       when "1" then msg.send "http://i.imgur.com/9Dql0R1.png"
@@ -12,5 +12,5 @@ module.exports = (robot) ->
       when "8" then msg.send "http://i.imgur.com/3FMnZkj.png"
       when "9" then msg.send "http://i.imgur.com/cvbcuGJ.png"
       when "10" then msg.send "http://i.imgur.com/Yme2tO2.png"
-      when "scale of kanye to kanye" then msg.send("http://i.imgur.com/LSH4nza.png")
-      else msg.send "I need a number between 1 and 10."
+  robot.respond /(scale of kanye to kanye)/i, (msg) ->
+      msg.send("http://i.imgur.com/LSH4nza.png")
