@@ -13,4 +13,4 @@ module.exports = (robot) ->
       when "9" then msg.send "http://i.imgur.com/cvbcuGJ.png"
       when "10" then msg.send "http://i.imgur.com/Yme2tO2.png"
   robot.respond /(scale of kanye to kanye)/i, (msg) ->
-      msg.send("http://i.imgur.com/LSH4nza.png")
+    msg.send("http://i.imgur.com/LSH4nza.png")
