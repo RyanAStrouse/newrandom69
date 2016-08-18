@@ -16,7 +16,7 @@
 
 module.exports = (robot) ->
   robot.respond /(\d+)d(\d+)$/i, (msg) ->
-    if msg.match[1]
+    if msg.match[1]?
         x = msg.match[1]
     else
         x = 1
