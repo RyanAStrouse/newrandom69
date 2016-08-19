@@ -17,7 +17,7 @@
 module.exports = (robot) ->
   robot.respond /(\D|\d+)d(\d+)$/i, (msg) ->
     amt = parseInt(msg.match[1]);
-    if isNaN(amt)
+    if isNaN(amt) or amt == undefined
         x = 1
     else
         x = msg.match[1]
