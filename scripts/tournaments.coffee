@@ -37,8 +37,8 @@ module.exports = (robot) ->
         for t in content
           do (t) ->
             names.push(t.tournament.name)
-        msg.send "Tournament Names ", ->
-        msg.reply " " + names
+        msg.send "Tournament Names " ->
+        msg.send " " + names
         
 
 
