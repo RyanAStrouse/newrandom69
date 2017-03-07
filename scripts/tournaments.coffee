@@ -36,8 +36,8 @@ module.exports = (robot) ->
         names = []
         for t in content
           do (t) ->
-            names.push(t.tournament.name + " (ID=" + t.tournament.id + ")")  
-        msg.send "Tournament Names " + names     
+            names.push(t.tournament.name + " (ID=" + t.tournament.id + ")" + " Current State: " + t.tournament.state.toUpperCase() + "\n")
+        msg.send "Tournament Information" + "\n" + names     
 
 
 
