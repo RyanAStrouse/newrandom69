@@ -13,14 +13,13 @@
 # Author:
 #   rstrouse
 
-class Welcome
-
   validWelcome = [
-      "We have a new kid on the block, Hello!", "Welcome the newest member to the team!", "Thanks for joining us!", "Happy to have you here!"
+      'We have a new kid on the block, Hello!'
+      'Welcome the newest member to the team!'
+      'Thanks for joining us!'
+      'Happy to have you here!'
     ]
 
   module.exports = (robot) ->
     robot.enter (msg) ->
-      room = "integration-test"
-      msg.messageRoom room msg.random validWelcome
-
+      msg.send {room: 'integration-test'}, msg.random validWelcome
