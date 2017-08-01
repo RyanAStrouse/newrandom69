@@ -28,6 +28,6 @@ class Welcome
     welcome = new Welcome robot
     robot.hear /joined #integration-test/, (msg) ->
     subject = msg.match[1].toLowerCase()
-    msg.send "#{subject} #{Welcome.valid_welcomes()}"
+    msg.send "#{subject} #{welcome.valid_welcomes()}"
 
 
