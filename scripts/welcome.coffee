@@ -15,19 +15,12 @@
 
 class Welcome
 
-  constructor: (@robot) ->
-    @valid_welcomes = [
-      "is the new kid on the block! Hello!", "is the newest member of the team! Welcome!", "Thanks for joining us, ", "Happy to have you here"
+  validWelcome = [
+      "We have a new kid on the block, Hello!", "Welcome the newest member to the team!", "Thanks for joining us!", "Happy to have you here!"
     ]
 
-
-  welcomeresponses: ->
-    @valid_welcomes[Math.floor(Math.random)]
-
   module.exports = (robot) ->
-    welcome = new Welcome robot
-    robot.hear /(\S+[^-\s])joined #integration-test(\s|$)/, (msg) ->
-      subject = msg.match[1].toLowerCase()
-      welcome.valid_welcomes subject
-      msg.send "#{subject} #{welcome.valid_welcomes()}"
+    robot.enter (msg) ->
+      room = "integration-test"
+      msg.messageRoom room msg.random validWelcome
 
