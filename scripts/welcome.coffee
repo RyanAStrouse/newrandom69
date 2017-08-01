@@ -22,4 +22,4 @@
 
   module.exports = (robot) ->
     robot.enter (msg) ->
-      msg.send room: 'integration-test', msg.random validWelcome
+      msg.messageRoom('integration-test', msg.random validWelcome)
