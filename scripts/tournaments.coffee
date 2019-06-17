@@ -7,7 +7,7 @@
 # api-key: zGKM450yxSIJ2LbTu6jQWsWsloZj7zOC0nPlBQR2
 # https://username:api-key@api.challonge.com/v1/...
 #
-# Commands:
+# 
 #   See api.challonge.com/v1 for more details
 #   TOURNAMENT COMMANDS
 #   hubot tournament index all
