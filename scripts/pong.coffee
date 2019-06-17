@@ -1,5 +1,6 @@
-# ping pong ladder
+#ping pong ladder
 #
+# Commands:
 # !pong register
 
 module.exports = (robot) ->
