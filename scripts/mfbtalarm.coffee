@@ -8,7 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot alerts?
+# hubot mfbttest
+# hubot alerts?
 #   
 # Author:
 #   cgack
