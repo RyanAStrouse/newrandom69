@@ -32,7 +32,8 @@ module.exports = (robot) ->
         (month == 10 && date < 6))) ||  # November 6
         day == 5 && hour >= 20 && min >= 17
       robot.messageRoom '#mfbt', 'HEY! its MFBT!'
-      robot.messageRoom '#mfbt', '/poll Shall we get beers today? :beers:YES :no:NO'
+      robot.hear  HEY! its MFBT!/i, (msg) ->
+           msg.send "/poll Shall we get beers today? YES :beers: NO :no:"
       clearInterval intv
       false
   
