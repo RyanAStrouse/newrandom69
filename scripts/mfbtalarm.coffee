@@ -31,7 +31,6 @@ module.exports = (robot) ->
         (month == 10 && date < 6))) ||  # November 6
         day == 5 && hour >= 18 && min >= 01
       robot.messageRoom '#mfbt', 'HEY! its MFBT! Shall we get beers today?'
-      res.reply ':beers: :no:'
       clearInterval intv
       false
   
