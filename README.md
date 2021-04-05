@@ -1,0 +1,2 @@
+# newrandom
+Bot for coolness
