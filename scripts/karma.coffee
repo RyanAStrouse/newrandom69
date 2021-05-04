@@ -16,7 +16,7 @@
 #   hubot karma worst - show the bottom 5
 #
 # Author:
-#   stuartf
+#   stuartf & rstrouse
 
 class Karma
   
@@ -48,6 +48,12 @@ class Karma
     @cache[thing] ?= 0
     @cache[thing] -= 1
     @robot.brain.data.karma = @cache
+    
+  set: (thing, val) ->
+    console.log("The thing: ", thing)
+    console.log("The val: ", val)
+    @cache[thing] = val
+    @robot.brain.data.karma = @cache
   
   incrementResponse: ->
      @increment_responses[Math.floor(Math.random() * @increment_responses.length)]
@@ -78,12 +84,24 @@ module.exports = (robot) ->
   robot.hear /(\S+[^+\s])\+\+(\s|$)/, (msg) ->
     subject = msg.match[1].toLowerCase()
     karma.increment subject
+    console.log("Increment Subject: ", subject)
     msg.send "#{subject} #{karma.incrementResponse()} (Karma: #{karma.get(subject)})"
   
   robot.hear /(\S+[^-\s])--(\s|$)/, (msg) ->
     subject = msg.match[1].toLowerCase()
     karma.decrement subject
     msg.send "#{subject} #{karma.decrementResponse()} (Karma: #{karma.get(subject)})"
+  
+  robot.respond /karma set ?(\S+[^-\s])$ (^-?\d{2}(\.\d+))?$/i, (msg) ->
+    if msg.envelope.user.name == "rstrouse"
+      console.log("Matched Message: ", msg.match[2])
+      count = msg.match[2]
+      subject = msg.match[1].toLowerCase()
+      karma.set subject, count
+      console.log("Count: ", count)
+      msg.send "#{subject} has had its karma set to " + count
+    else
+      msg.send "https://thumbs.gfycat.com/DisastrousMemorableHorse-size_restricted.gif"
   
   robot.respond /karma empty ?(\S+[^-\s])$/i, (msg) ->
     subject = msg.match[1].toLowerCase()
