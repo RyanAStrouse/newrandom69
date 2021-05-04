@@ -92,7 +92,7 @@ module.exports = (robot) ->
     karma.decrement subject
     msg.send "#{subject} #{karma.decrementResponse()} (Karma: #{karma.get(subject)})"
   
-  robot.respond /karma set ?(\S+[^-\s])$ (^-?\d{2}(\.\d+))?$/i, (msg) ->
+  robot.respond /karma set ?(\S+[^-\s]) (-?\d+)?/i, (msg) ->
     if msg.envelope.user.name == "rstrouse"
       console.log("Matched Message: ", msg.match[2])
       count = msg.match[2]
