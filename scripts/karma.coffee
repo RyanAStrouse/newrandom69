@@ -16,7 +16,7 @@
 #   hubot karma worst - show the bottom 5
 #
 # Author:
-#   stuartf & rstrouse
+#   stuartf
 
 class Karma
   
@@ -41,18 +41,23 @@ class Karma
   
   increment: (thing) ->
     @cache[thing] ?= 0
+    @cache[thing] = parseInt(@cache[thing], 10)
     @cache[thing] += 1
+    console.log("The increment thing: ", @cache[thing])
     @robot.brain.data.karma = @cache
 
   decrement: (thing) ->
     @cache[thing] ?= 0
+    @cache[thing] = parseInt(@cache[thing], 10)
     @cache[thing] -= 1
+    console.log("The decrement thing: ", @cache[thing])
     @robot.brain.data.karma = @cache
     
   set: (thing, val) ->
     console.log("The thing: ", thing)
     console.log("The val: ", val)
-    @cache[thing] = val
+    @cache[thing] = parseInt( val, 10 );
+    console.log("The parseInt is: ", val)
     @robot.brain.data.karma = @cache
   
   incrementResponse: ->
