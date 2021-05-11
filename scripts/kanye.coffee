@@ -1,3 +1,19 @@
+# Description:
+#   Uses varying levels of kanye 
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot scale of kanye to kanye - display scale of kanye
+#   hubot kanye <number> - display image of kanye relative to the scale
+#
+# Author:
+#   jscott
+
 module.exports = (robot) ->
   robot.hear /(kanye |kanye)(..?)/i, (msg) ->
     num = msg.match[2]

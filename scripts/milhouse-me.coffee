@@ -1,9 +1,17 @@
 ﻿# Description:
 #   Grabs a picture from actualmilhouse.tumblr.com and sends the URL.
 #
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
 # Commands:
 #   hubot milhouse (someone) - displays a milhouse picture
 #
+# Author:
+#   unknown
 
 module.exports = (robot) ->
   robot.respond /milhouse (.*)/i, (msg) ->

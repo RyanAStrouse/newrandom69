@@ -12,7 +12,6 @@
 #
 # Author:
 #   unknown
-#
 
 module.exports = (robot) ->
   robot.respond /(simpson|simpsons) me/i, (msg) ->
