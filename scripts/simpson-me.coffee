@@ -1,14 +1,9 @@
 ﻿# Description:
-#   Grabs a random picture from snipsons tumblr com and posts it
-#
-# Dependencies:
-#   None
-#
-# Configuration:
-#   None
+#   Grabs a random picture from snipsons tumblr com
+#   and posts it.
 #
 # Commands:
-#   hubot simpson me - displays a snipsons tumblr picture
+#   hubot simpson me - Displays a snipsons tumblr picture
 #
 # Author:
 #   unknown
