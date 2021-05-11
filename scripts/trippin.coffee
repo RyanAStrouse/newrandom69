@@ -1,8 +1,17 @@
 ﻿# Description:
 #   Grabs a picture from kidmograph.tumblr.com and sends the URL.
 #
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
 # Commands:
 #   hubot trippin - woooaaaahhh
+#
+# Author:
+#   unknown
 #
 
 module.exports = (robot) ->

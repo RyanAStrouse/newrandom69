@@ -1,8 +1,17 @@
 ﻿# Description:
 #   Grabs a random picture from snipsons.tumblr.com and posts it.
 #
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
 # Commands:
 #   hubot simpson me - displays a snipsons.tumblr.com picture
+#
+# Author:
+#   unknown
 #
 
 module.exports = (robot) ->

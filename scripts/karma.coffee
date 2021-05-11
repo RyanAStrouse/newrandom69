@@ -16,7 +16,7 @@
 #   hubot karma worst - show the bottom 5
 #
 # Author:
-#   stuartf
+#   stuartf & rstrouse
 
 class Karma
   
