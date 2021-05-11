@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot simpson me - displays a snipsons.tumblr.com picture
+#   hubot simpson me - displays a snipsons tumblr picture
 #
 # Author:
 #   unknown
