@@ -15,6 +15,7 @@
 
 
 module.exports = (robot) ->
+
     facts = [
          "While a giant panda is resting, it continues to defecate.",
          "A wild giant panda's diet is almost exclusively (99 percent) bamboo",
@@ -41,7 +42,8 @@ module.exports = (robot) ->
          "Female pandas have smaller claws than male pandas.",
          "Pandas hatch as tiny larvae, just the size of the head of a pin. Panda larvae float for several weeks before settling to the ocean floor to hatch."
     ]
-	robot.respond /panda fact$/i, (msg) ->
+
+	robot.respond /panda fact/i, (msg) ->
 		randIndex = Math.floor((Math.random()*facts.length)+1)
 		msg.send facts[randIndex - 1]
 				
