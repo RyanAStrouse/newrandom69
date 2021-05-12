@@ -11,14 +11,14 @@
 #   hubot panda fact - Reply random panda fact.
 #
 # Author:
-#   chartman & rstrouse
+#   chartman and rstrouse
 
 
 module.exports = (robot) ->
 
     facts = [
          "While a giant panda is resting, it continues to defecate.",
-         "A wild giant panda's diet is almost exclusively (99 percent) bamboo",
+         "A wild giant panda's diet is almost exclusively 99 percent bamboo",
          "A group of pandas is known as a cupboard",
          "Pandas were frequently used as background extras in classic black and white films",
          "The eyespots of a giant panda cub are initially in the shape of a circle. As the cub grows, the circles become shaped like a teardrop",
@@ -44,7 +44,4 @@ module.exports = (robot) ->
     ]
 
 	robot.respond /panda fact/i, (msg) ->
-		randIndex = Math.floor((Math.random()*facts.length)+1)
-		msg.send facts[randIndex - 1]
-				
-				
+		msg.send msg.random facts				
