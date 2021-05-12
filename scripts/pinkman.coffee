@@ -11,7 +11,7 @@ module.exports = (robot) ->
 
 	quotes = [
 		"Yo!",
-		"Bitch!"
+		"Bitch!",
 		"Yo...Bitch!",
 		"Gatorade me bitch!",
 		"Look, I like making cherry product, but let's keep it real, alright? We make poison for people who don't care. We probably have the most unpicky customers in the world.",
