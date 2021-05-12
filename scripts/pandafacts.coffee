@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot panda fact - Reply back with random panda fact.
+#   hubot panda fact - Reply random panda fact.
 #
 # Author:
 #   chartman & rstrouse
@@ -25,7 +25,7 @@ module.exports = (robot) ->
          "Pandas have been a symbol of peace in China. For example, hundreds of years ago, warring tribes in China would raise a flag with a picture of a panda on it to stop a battle or call a truce",
          "According to legend, the panda was once an all-white bear. When a small girl tried to save a panda cub from being attacked by a leopard, the leopard killed the girl instead. Pandas came to her funeral wearing armbands of black ashes. As they wiped their eyes, hugged each other, and covered the ears, they smudged the black ashes.",
          "Pandas are pigeon-toed; in other words, they walk with their front paws turned inward.",
-         "The Chinese call giant pandas Yaoguai or “large bear cat.” Pandas have also been known as “beast of prey,” “white leopard,” “iron eating beast,” and “bamboo bear."",
+         "The Chinese call giant pandas Yaoguai or large bear cat. Pandas have also been known as beast of prey, white leopard, iron eating beast, and bamboo bear.",
          "More than half of newborn pandas die from diseases or from being accidentally crushed by their mothers.",
          "A panda mother is 900 times bigger than her newborn cub, which weighs less than 5 oz. In comparison, an 8-pound human baby would have a mother that weighed 7,200 pounds.",
          "A panda’s throat has a special lining to protect it from bamboo splinters.",
