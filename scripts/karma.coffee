@@ -98,7 +98,9 @@ module.exports = (robot) ->
     msg.send "#{subject} #{karma.decrementResponse()} (Karma: #{karma.get(subject)})"
   
   robot.respond /karma set ?(\S+[^-\s]) (-?\d+)?/i, (msg) ->
-    if msg.envelope.user.name == "rstrouse"
+    username_check = msg.envelope.user.name
+    console.log("This user is up to something: ", username_check)
+    if username_check == "rstrouse" or username_check == "brandon.d.stuckey" or username_check == "jmscott"
       console.log("Matched Message: ", msg.match[2])
       count = msg.match[2]
       subject = msg.match[1].toLowerCase()
@@ -106,7 +108,9 @@ module.exports = (robot) ->
       console.log("Count: ", count)
       msg.send "#{subject} has had its karma set to " + count
     else
+      console.log("This user attempted massive karma boost: ", username_check)
       msg.send "https://thumbs.gfycat.com/DisastrousMemorableHorse-size_restricted.gif"
+      msg.send "Only the keepers of the karma may distribute massive gains or losses..."
   
   robot.respond /karma empty ?(\S+[^-\s])$/i, (msg) ->
     subject = msg.match[1].toLowerCase()
